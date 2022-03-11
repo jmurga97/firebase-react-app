@@ -1,13 +1,46 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+form {
+  padding: 20px;
+  margin-top: 60px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+form button,
+form h5 {
+  margin: 20px 0;
+}
+
+form .input-field label {
+  color: #616161;
+}
+/* label focus color */
+.input-field input[type="text"]:focus + label,
+.input-field input[type="password"]:focus + label {
+  color: #0d47a1 !important;
+}
+
+/* label underline focus color */
+.input-field input[type="text"]:focus,
+.input-field input[type="password"]:focus,
+.materialize-textarea:focus {
+  border-bottom: 1px solid #0d47a1 !important;
+  box-shadow: 0 1px 0 0 #0d47a1 !important;
+}
+
+.input-field input[type="text"].valid,
+.input-field input[type="password"].valid,
+.materialize-textarea:focus + label {
+  border-bottom: 1px solid #0d47a1 !important;
+  box-shadow: 0 1px 0 0 #0d47a1 !important;
+}
+
+/* invalid color */
+.input-field input[type="text"].invalid,
+.input-field input[type="password"].invalid,
+.materialize-textarea.invalid {
+  border-bottom: 1px solid #f44336 !important;
+  box-shadow: 0 1px 0 0 #f44336 !important;
+}
+
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: #0d47a1 !important;
 }
